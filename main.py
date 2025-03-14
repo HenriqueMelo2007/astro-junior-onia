@@ -2,10 +2,25 @@
 
 # imports
 import pandas
-import numpy
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import (
+    RandomForestClassifier,
+    GradientBoostingClassifier,
+    AdaBoostClassifier,
+)
+from sklearn.tree import DecisionTreeClassifier
+
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.neural_network import MLPClassifier
+
+mlp_pipeline = Pipeline(
+    [
+        ("scaler", StandardScaler()),
+        ("mlp", MLPClassifier(random_state=42, max_iter=1000, solver='sgd', hidden_layer_sizes=(100, 50), activation='tanh'))
+    ]
+)
 
 # training
 trainFile = pandas.read_csv("treino.csv")
@@ -21,6 +36,10 @@ models = {
         random_state=42, n_estimators=500, bootstrap=False
     ),
     "Default Random Forest": RandomForestClassifier(random_state=42),
+    "Gradient Boosting": GradientBoostingClassifier(random_state=42),
+    "Ada Boost": AdaBoostClassifier(random_state=42),
+    "Decision Tree": DecisionTreeClassifier(random_state=42),
+    "MLP Pipeline": mlp_pipeline,
 }
 
 
