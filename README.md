@@ -45,3 +45,18 @@ Os resultados serão avaliados pelo desempenho de suas predições sobre o conju
 
 A Medida-F é a média harmônica entre as métricas de Precisão e Revocação. Em outras palavras, a Medida-F é uma métrica que avalia o desempenho de um modelo preditivo de modo a trazer um número único que indique a sua qualidade geral.
 
+# Solução
+
+## 📁[**Arquivo de código**](main.py)
+
+1. Carregamento dos dados
+1. Análise exploratória
+1. Pré-processamento
+1. Construção dos pipelines de modelagem
+1. Otimização dos hiperparâmetros
+1. Seleção e treinamento do melhor modelo
+1. Geração das previsões
+
+## 📁[**Arquivo Jupyther**](jupyther.ipynb)
+
+Exibição dos arquivos teste.csv e treino.csv, e gráficos para maior compreensão dos dados
