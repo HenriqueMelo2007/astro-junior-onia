@@ -59,4 +59,4 @@ A Medida-F é a média harmônica entre as métricas de Precisão e Revocação.
 
 ## 📁[**Arquivo Jupyter**](jupyther.ipynb)
 
-Exibição dos arquivos teste.csv e treino.csv, e gráficos para maior compreensão dos dados
+Exibição de gráficos para maior compreensão dos dados
